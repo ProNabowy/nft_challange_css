@@ -1,0 +1,116 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --main-margin: 20px;
+  --main-border-radius: 15px;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: hsl(217, 54%, 11%);
+  font-family: "Barlow", sans-serif;
+  font-family: "Outfit", sans-serif;
+}
+.Parent_Of_items {
+  width: 350px;
+  height: 450px;
+  padding: 20px;
+  border-radius: var(--main-border-radius);
+  background-color: hsl(216, 50%, 16%);
+  height: fit-content;
+}
+.Parent_Of_items img {
+  max-width: 100%;
+}
+.Parent_Of_items .imges {
+  margin-bottom: 15px;
+  position: relative;
+}
+.Parent_Of_items .imges img {
+  border-radius: var(--main-border-radius);
+}
+.Parent_Of_items .imges::after {
+  content: "";
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #00fff77a;
+  transition: 0.5s;
+  border-radius: var(--main-border-radius);
+}
+.Parent_Of_items .imges:hover::after {
+  width: 100%;
+}
+.Parent_Of_items .text h2 {
+  color: white;
+  font-size: 20px;
+  margin-bottom: var(--main-margin);
+  transition: 1s;
+  cursor: pointer;
+}
+.Parent_Of_items .text h2:hover {
+  color: hsl(178, 100%, 50%);
+}
+.Parent_Of_items .text p {
+  margin-bottom: var(--main-margin);
+  line-height: 1.6;
+  font-size: 16px;
+  font-weight: bold;
+  color: hsl(215, 51%, 70%);
+}
+.Parent_Of_items .flex {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--main-margin);
+}
+.Parent_Of_items .flex > div {
+  display: flex;
+  flex-basis: 30%;
+  justify-content: space-around;
+  align-items: center;
+}
+.Parent_Of_items .flex > div h5 {
+  font-weight: bolder;
+  color: hsl(215, 51%, 70%);
+}
+div:empty {
+  width: 100%;
+  background-color: hsl(215, 32%, 27%);
+  height: 1px;
+  margin-bottom: var(--main-margin);
+}
+.Parent_Of_items .Creation {
+  display: flex;
+  align-items: center;
+}
+.Parent_Of_items .Creation img {
+  width: 30px;
+  height: 30px;
+  border: 1px solid white;
+  border-radius: 50%;
+  margin-right: var(--main-margin);
+}
+
+.Parent_Of_items .Creation h5 {
+  color: hsl(215, 32%, 27%);
+}
+.active {
+  color: hsl(178, 100%, 50%) !important;
+}
+.Parent_Of_items .Creation h5 span {
+  color: white;
+  font-weight: normal;
+  word-spacing: 2px;
+  transition: 1s;
+  cursor: pointer;
+}
+.Parent_Of_items .Creation h5 span:hover {
+  color: hsl(178, 100%, 50%);
+}
